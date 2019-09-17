@@ -1,13 +1,13 @@
 {
   "name": "scaleres",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "",
-  "main": "bin/main.js",
+  "main": "dist/main.js",
   "scripts": {
-    "prepublishOnly": "autover"
+    "prepublishOnly": "autover && tsc  && dos2unix dist/main.js"
   },
   "bin": {
-    "scaleres": "./bin/main.js"
+    "scaleres": "./dist/main.js"
   },
   "keywords": [],
   "author": "",
