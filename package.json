@@ -1,0 +1,41 @@
+{
+  "name": "scaleres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "autover && tsc  && dos2unix dist/src/bin.js",
+    "test": "nyc --exclude '**/*.d.ts' -e .ts --include 'src/**/*.ts' --all mocha --timeout 5000 --require ts-node/register test/**/*.ts",
+    "build": "tsc"
+  },
+  "bin": {
+    "scaleres": "./dist/src/bin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@sanzaru/autover": "^0.0.7",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.11.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "isbinaryfile": "^4.0.0",
+    "lodash": "^4.17.11",
+    "log4js": "^4.1.0",
+    "prompts": "^2.0.4",
+    "ora": "^3.4.0",
+    "recursive-copy": "^2.0.10",
+    "rimraf": "^2.6.3",
+    "through2": "^3.0.1"
+  }
+}
